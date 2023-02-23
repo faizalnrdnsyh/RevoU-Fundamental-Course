@@ -63,7 +63,6 @@ header{
 }
 .navbar{
     display: flex;
-    flex-wrap: wrap;
     justify-content: end;
     background-color: #333333;
     border-bottom: 5px solid white;
