@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <title>FLEGMATEES</title>
+    </head>
+    <body>
+        <!-- NAVBAR -->
+        <header>
+            <div class="container">
+                <nav class="navbar">
+                    <a class="nav-logo" href="/index.html"><img class="nav-logo" src="assets/img/flegmatess-logo.png" ></a>
+                    <div><a class="nav-control" href="/index.html">HOME</a></div>
+                    <div><a class="nav-control" href="/profile.html">OUR PROFILE</a></div>
+                    <div><a class="nav-control" href="/portofolio.html">PORTOFOLIO</a></div>
+                    <div><a class="nav-control" href="/message-us.html">MESSAGE US</a></div>  
+                </nav>
+            </div>
+        </header>
+   
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- ABOUT US -->
+            <section>
+                <div class="container">
+                    <div class="about-us">
+                        <h1 class="about-title">Easy and Fun</h1>
+                        <p class="about-desc"> to make your clothes</p>
+                            <div class="slider">
+                                <!-- <button onclick="plusDivs(-1)">&#8249</button>   -->
+                                <img class="img-slideshow" src="assets/img/Slider-Divisi-Sablon.jpg">
+                                <img class="img-slideshow" src="assets/img/Slider-Detail-Sablon.jpg">
+                                <img class="img-slideshow" src="assets/img/Slider-Sablon-Manual.jpg">
+                                <img class="img-slideshow" src="assets/img/Slider-Plastisol-HD.jpg">        
+                                <!-- <button onclick="plusDivs(1)">&#8250</button> -->
+                            </div>
+                    </div>
+                </div>
+            </section>
+            <!-- OUR PRODUCT -->
+            <section>
+                <div class="container">
+                    <div class="our-product">
+                        <h1 class="product-title">Our Products</h1>
+                        <div>
+                            <div class="product-row">
+                                <a href=""><img class="product-img" src="/assets/img/icon-product-tshirt.jpg" alt=""></a>
+                                <h4 class="head-title">T-Shirt</h3>
+                            </div>
+                            <div class="product-row">
+                                <a href=""><img class="product-img" src="/assets/img/icon-product-jacket.jpg" alt=""></a>
+                                <h4 class="head-title">Hoodie</h3>
+                            </div>
+                            <div class="product-row">
+                                <a href=""><img class="product-img" src="/assets/img/icon-product-polo.jpg" alt=""></a>
+                                <h4 class="head-title">Polo Shirt</h3>
+                            </div>
+                            <div class="product-row">
+                                <a href=""><img class="product-img" src="/assets/img/icon-product-shirt.jpg" alt=""></a>
+                                <h4 class="head-title">Shirt</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- MESSAGE US -->
+            <section>
+            <div class="container">
+                <div class="message">
+                    <h1 class="message-title">Message Us</h1>
+                    <div class="message-us" id="message-us">
+                        <div>
+                            <form class="form-control" name="message-form" onsubmit="return validateForm()">
+                                <div class="message-row">
+                                    <div class="col-25"><label for="fullname">Nama</label></div>
+                                    <div class="col-5"><label>:</label></div>
+                                    <div class="col-70"><input class="form-message" type="text" name="fullname" id="fullname" placeholder="Nama Lengkap"></div>
+                                </div>
+                                <div class="message-row">
+                                    <div class="col-25"><label for="birthdate">Tanggal Lahir</label></div>
+                                    <div class="col-5"><label>:</label></div>
+                                    <div class="col-70"><input class="form-message" onfocus="(this.type='date')" type="text" name="birthdate" id="birthdate" placeholder="Tanggal Lahir"></div>
+                                </div>
+                                <div class="message-row">
+                                    <div class="col-25"><label for="gender">Jenis Kelamin</label></div>
+                                    <div class="col-5"><label>:</label></div>
+                                    <div class="col-70">
+                                        <input type="radio" name="gender" id="L" value="Laki-laki">
+                                        <label for="L">Laki-laki</label>
+                                        <input type="radio" name="gender" id="P" value="Perempuan">
+                                        <label for="P">Perempuan</label>
+                                    </div>
+                                </div>
+                                <div class="message-row">
+                                    <div class="col-25"><label for="message">Pesan</label></div>
+                                    <div class="col-5"><label>:</label></div>
+                                    <div class="col-70">
+                                        <textarea class="form-message" type="text" name="message" id="message" placeholder=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="message-row">
+                                        <input class="col-100" id="submit" type="submit" value="Submit">
+                                </div>  
+                            </form>  
+                        </div>
+                        <div>
+                            <div class="submited">
+                                <p><span id="sender-fullname"></span></p>
+                                <p><span id="sender-date"></span></p>
+                                <p><span id="sender-gender"></span></p>
+                                <p><span id="sender-message"></span></p>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+            
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="container">
+            <div>
+                <strong>© 2023 FLEGMATEES - faizalnrdnsyh208@gmail.com</strong>
+            </div>
+        </footer>
+    </body>
+
+    
+    <script>
+        //IMAGE SLIDE SHOW
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n){
+            showDivs((slideIndex += n));
+        }
+
+        function showDivs(n){
+            var i;
+            var imgList = document.getElementsByClassName('img-slideshow');   
+            if (n > imgList.length) slideIndex = 1;
+            else if (n < 1) slideIndex = imgList.length;
+
+            for (i = 0; i < imgList.length; i++){
+                imgList[i].style.display = 'none';
+            }
+
+            imgList[slideIndex - 1].style.display = 'block';
+        }
+
+            setInterval(() => {
+                plusDivs(1);
+            }, 2500);
+  
+        
+
+        // VALIDATION FORM
+        function validateForm() {
+            const name = document.forms["message-form"]["fullname"].value;
+            const birthdate = document.forms["message-form"]["birthdate"].value;
+            const gender = document.forms["message-form"]["gender"].value;
+            const message = document.forms["message-form"]["message"].value;
+    
+            if (name == "" || birthdate == "" || gender == "" || message == "") {
+                alert("Tidak boleh kosong");
+                return false;
+            }
+    
+            setSenderUI(name, birthdate, gender, message);
+            return false;
+        }
+    
+        function setSenderUI(name,birthdate,gender,message){
+            document.getElementById("sender-fullname").innerHTML = "Nama : "+ name;
+            document.getElementById("sender-date").innerHTML = "Tanggal Lahir : "+ birthdate;
+            document.getElementById("sender-gender").innerHTML = "Jenis Kelamin : "+ gender;
+            document.getElementById("sender-message").innerHTML = "Pesan : "+ message;
+        }
+
+        
+    </script>
+    
+</html>
+

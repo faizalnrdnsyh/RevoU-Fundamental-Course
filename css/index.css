@@ -1,0 +1,286 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------- */
+
+.container{
+    max-width: 1366px;
+    width: 100%;
+    margin: auto;
+}
+/* NAVBAR */
+header{
+    position: fixed;
+    left: 0px;
+    right: 0px;  
+    top: 0px;  
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    background-color: #333333;
+    border-bottom: 5px solid white;
+    padding: 10px 70px 10px 70px;
+}
+.nav-logo{
+    margin: 5px;
+    margin-right: auto;
+    height: 40px;
+    /* width: 40px; */
+}
+.navbar > div{
+    text-align: center;
+    font-size: 14;
+    font-family:'verdana';
+    padding: 5px;
+    margin: 10px 10px 10px 0px;
+    border-radius: 6px;
+    /* background-color:#ffe600; */
+}
+.nav-control{
+    display: inline-block;
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;  
+}
+
+/* ABOUT-US */
+.about-us{
+    margin-top: 35px; 
+}
+.about-title{
+    font-size: 30px;
+    font-family:'verdana';
+    color: #333333;
+    padding-left: 70px;
+    padding-top: 70px;
+}
+.about-desc{
+    font-size: 20px;
+    font-family:'verdana';
+    color: #333333;
+    padding-left: 70px;
+    padding-top: 5px;
+}
+.slider{
+    display: flex;
+    flex-direction: column;
+    max-width: 1366px;
+    margin-top: 20px;
+}
+.img-slideshow{ 
+    max-width: 1366px;
+    height: 578px;    
+    object-fit: cover;
+    object-position: center;
+    
+}
+.btn-slider{
+    width: 20px;
+}
+
+/* OUR-PRODUCT */
+.product-title{
+    font-size: 30px;
+    font-family:'verdana';
+    color: white;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+.our-product{
+    display: flex;
+    flex-direction: column;
+    background-color: #333333;
+}
+.our-product > div{
+    font-family:'verdana';
+    display: flex;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+.product-row{
+    margin: 50px auto;
+}
+.product-img{
+    width: 200px;
+    border-radius: 50%;
+    border: 10px double #f9fafc;
+    margin-bottom: 20px;
+}
+
+/* MESSAGE-US */
+.message-title{
+    margin-top: 50px;
+    font-size: 30px;    
+    font-family:verdana;
+    padding-left: 70px;
+}
+.message-us{
+    display: flex;
+    margin  : 20px;
+    margin-bottom: 50px;
+}
+.message-us > div{
+    font-family:'verdana';
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.message-row{
+    display: flex;
+    width: 100%;
+}
+.form-control{
+    width: 100%;
+}
+.form-message{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 5px;   
+}
+.col-5{
+    float: left;
+    width: 5%;
+    margin-top: 10px;
+}
+.col-25{
+    float: left;
+    width: 25%;
+    margin-top: 10px;
+}
+.col-70{
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+}
+.col-100{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+#submit{
+    /* font-weight: bold; */
+    height: 30px;
+    background-color: #333333;
+    color: white;
+    border-radius: 4px;
+}
+.submited{
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* FOOTER */
+footer{
+    display: flex;
+    background-color: #333333;
+}
+footer > div{
+    margin-left: auto;
+    padding: 30px;
+    color: white;
+    font-family: verdana;
+}
+
+@media (max-width: 900px) {
+    header{
+        position: absolute;
+        left: 0px;
+        right: 0px;  
+        top: 0px;  
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .nav-logo{
+        text-align: center;
+        margin: 10px ;
+    }
+    .nav-control{
+        padding: 0px;
+    }
+    .about-us{
+        margin-top: 220px; 
+    }
+    .our-product > div{
+        flex-direction: column;
+    }
+    .product-row{
+        margin: 10px auto;
+    }
+    .our-product{
+        text-align: center;
+    }
+    .product-title{
+        margin:20px 0px;
+    }
+    .message-title{
+        text-align: center;
+        margin-top: 20px;
+        margin-left: 0px;
+        padding: 0px;
+    }
+    .message-us {
+        flex-direction: column;
+    }
+    .submited {
+        margin: 10px auto;
+        
+    }
+  }
